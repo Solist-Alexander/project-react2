@@ -1,5 +1,4 @@
-const baseURL = process.env.REACT_APP_MOVIES_API
-
+const baseURL = 'https://api.themoviedb.org/3'
 const movies = '/discover/movie'
 const movie = '/movie'
 const genres = '/genre/movie/list'
