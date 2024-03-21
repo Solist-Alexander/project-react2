@@ -1,0 +1,41 @@
+.movieDetailsContainer{
+    margin: 50px 0 0 300px;
+    display: flex;
+    width: 1000px;
+    border: 2px solid grey;
+    background: darkgray;
+}
+.movieDetailsContainer p{
+    font-size: 20px;
+    color: black;
+}
+.img {
+    height: 600px;
+}
+.buttonBack{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background: brown;
+    top: 90px;
+    left: 200px;
+    border: 2px solid #622a2a;
+}
+
+.movieInfoDiv{
+    margin: 0 0 0 40px;
+}
+.genresContainer{
+    display: flex;
+    justify-content: left;
+}
+.buttonGenre{
+    border-radius: 15px;
+    width: 80px;
+    height: 40px;
+    background: #847394;
+    border: 2px solid #635970;
+    color: gold;
+    cursor: pointer;
+}

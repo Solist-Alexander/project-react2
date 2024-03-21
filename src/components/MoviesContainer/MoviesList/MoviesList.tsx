@@ -11,18 +11,23 @@ const MoviesList = () => {
     const {movies} = useAppSelector(state => state.movies)
     const dispatch = useAppDispatch();
     const [query, setQuery] = useSearchParams({page: '1'});
-    const page = query.get('page');
+    const currentPage = query.get('page')?query.get('page'):'1'
+
 
     useEffect(()=>{
-       dispatch(movieActions.getAll(page))
+       dispatch(movieActions.getAll(currentPage))
 
-    },[page])
+    },[currentPage])
 
 
     return (
-        <div className={style.moviesListCardDiv}>
-            {movies.map(movie =><MoviesListCard movie={movie} key={movie.id}/>)}
-            {/*{movies && <PaginationForMovie/>}*/}
+        <div>
+            <div className={style.moviesListCardDiv}>
+                {movies && movies.map(movie => <MoviesListCard key={movie?.id} movie={movie} />)}
+            </div>
+            <div className={style.PaginationForMovieDiv}>
+                {movies && <PaginationForMovie/>}
+            </div>
         </div>
     );
 };
