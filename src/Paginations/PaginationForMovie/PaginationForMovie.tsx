@@ -20,9 +20,13 @@ const PaginationForMovie = () => {
     }
     return (
         <div className={style.paginationContainer}>
-            {+currentPage > 1 && <button onClick={prev} className={style.buttonPagination}>prev</button>}
+            {+currentPage > 1 ? (
+                <button onClick={prev} className={style.buttonPagination}>prev</button>
+            ) : (
+                <button disabled className={`${style.buttonPagination} ${style.disabledButton}`}>prev</button>
+            )}
             <div className={style.currentPageDiv}>{currentPage}</div>
-            <button  onClick={next} className={style.buttonPagination}>next</button>
+            <button onClick={next} className={style.buttonPagination}>next</button>
         </div>
     );
 };

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
-    margin-left: 60px;
+    margin-left: 75px;
     grid-row-gap: 10px;
 }
 .PaginationForMovieDiv{
@@ -19,3 +19,7 @@
     background: #ffffff;
     color: black;
 }
+/*.mainContainer{*/
+/*    width: 100vw;*/
+/*    margin: 0 auto;*/
+/*}*/
