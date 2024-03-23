@@ -2,19 +2,22 @@ import {createAsyncThunk, createSlice, isFulfilled} from "@reduxjs/toolkit";
 import {IMovie, IMovieDetails, IMovieInfo} from "../../interfaces /movieInterface";
 import {movieService} from "../../services/movieService";
 import {AxiosError} from "axios";
+import {searchService} from "../../services/searchService";
 
 interface IState {
-    movies: IMovie[] | null,
-    movieDetails: IMovieDetails | null,
-    page: number | null,
-    MovieByIDGenres: IMovie[] | null
+    movies: IMovie[]
+    movieDetails: IMovieDetails
+    page: number
+    MovieByIDGenres: IMovie[]
+    resultSearch: IMovie[]
 }
 
 const initialState: IState = {
     movies: null,
     page: null,
     movieDetails: null,
-    MovieByIDGenres: null
+    MovieByIDGenres: null,
+    resultSearch: null
 }
 
 const getAll = createAsyncThunk<IMovieInfo, string | null>(
@@ -33,9 +36,21 @@ const getAllMovieByIDGenres = createAsyncThunk<IMovieInfo, { id: number, page: s
     'movieSlice/getAllMovieByIDGenres',
     async ({id, page}, thunkAPI) => {
         try {
-            const {data} = await movieService.getAllMovieByIDGenres(id,page)
+            const {data} = await movieService.getAllMovieByIDGenres(id, page)
             return data
-        } catch (e){
+        } catch (e) {
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error.response.data)
+        }
+    }
+)
+const getAllMovieBySearch = createAsyncThunk<IMovieInfo, { query: string, page: string | null }>(
+    'movieSlice/getAllMovieBySearch',
+    async ({query, page}, thunkAPI) => {
+        try {
+            const {data} = await searchService.getAll(query, page)
+            return data
+        } catch (e) {
             const error = e as AxiosError
             return thunkAPI.rejectWithValue(error.response.data)
         }
@@ -62,15 +77,16 @@ const movieSlice = createSlice({
     reducers: {},
     extraReducers: builder =>
         builder
-            // .addCase(getAll.fulfilled, (state, action) => {
-            //     const {results, page} = action.payload
-            //     state.movies = results
-            //     state.page = page
-            // })
+            .addCase(getAllMovieBySearch.fulfilled, (state, action)=>{
+                const {results, page} = action.payload
+                state.resultSearch = results
+                state.page = page
+            })
+
             .addCase(getMovieDetails.fulfilled, (state, action) => {
                 state.movieDetails = action.payload
             })
-            .addMatcher(isFulfilled(getAll, getAllMovieByIDGenres), (state, action)=>{
+            .addMatcher(isFulfilled(getAll, getAllMovieByIDGenres), (state, action) => {
                 const {results, page} = action.payload
                 state.movies = results
                 state.page = page
@@ -85,7 +101,8 @@ const movieActions = {
     ...actions,
     getAll,
     getMovieDetails,
-    getAllMovieByIDGenres
+    getAllMovieByIDGenres,
+    getAllMovieBySearch
 }
 export {
     movieReducer,

@@ -1,7 +1,9 @@
+import {SearchList} from "../components/SearchContainer/SearchList";
+
 const SearchPage = () => {
     return (
         <div>
-            SearchPage
+            <SearchList/>
         </div>
     );
 };
