@@ -10,6 +10,7 @@ interface IState {
     page: number
     MovieByIDGenres: IMovie[]
     resultSearch: IMovie[]
+    isFormActive: boolean
 }
 
 const initialState: IState = {
@@ -17,7 +18,8 @@ const initialState: IState = {
     page: null,
     movieDetails: null,
     MovieByIDGenres: null,
-    resultSearch: null
+    resultSearch: null,
+    isFormActive: false
 }
 
 const getAll = createAsyncThunk<IMovieInfo, string | null>(
@@ -81,6 +83,7 @@ const movieSlice = createSlice({
                 const {results, page} = action.payload
                 state.resultSearch = results
                 state.page = page
+                state.isFormActive = true
             })
 
             .addCase(getMovieDetails.fulfilled, (state, action) => {
