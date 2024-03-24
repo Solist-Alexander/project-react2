@@ -1,14 +1,13 @@
 .moviesListCardDiv{
-    width: 100vw;
+    width: 80vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
-    margin-left: 75px;
+    margin-left: 60px;
     grid-row-gap: 10px;
-    /*position: absolute;*/
 }
 .PaginationForMovieDiv{
-    /*margin: 20px 0 20px 580px;*/
+    margin: 20px 0 20px 580px;
 }
 .inputSearch{
     margin: 20px 0 20px 600px;
@@ -19,12 +18,4 @@
     border: 2px solid #ff0000;
     background: #ffffff;
     color: black;
-}
-.mainContainer {
-    width: 100vw;
-    /*position: relative;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*text-align: center;*/
 }
