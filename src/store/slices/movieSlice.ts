@@ -9,8 +9,6 @@ interface IState {
     movieDetails: IMovieDetails
     page: number
     MovieByIDGenres: IMovie[]
-    resultSearch: IMovie[]
-    isFormActive: boolean
 }
 
 const initialState: IState = {
@@ -18,8 +16,6 @@ const initialState: IState = {
     page: null,
     movieDetails: null,
     MovieByIDGenres: null,
-    resultSearch: null,
-    isFormActive: false
 }
 
 const getAll = createAsyncThunk<IMovieInfo, string | null>(
@@ -46,18 +42,7 @@ const getAllMovieByIDGenres = createAsyncThunk<IMovieInfo, { id: number, page: s
         }
     }
 )
-const getAllMovieBySearch = createAsyncThunk<IMovieInfo, { query: string, page: string | null }>(
-    'movieSlice/getAllMovieBySearch',
-    async ({query, page}, thunkAPI) => {
-        try {
-            const {data} = await searchService.getAll(query, page)
-            return data
-        } catch (e) {
-            const error = e as AxiosError
-            return thunkAPI.rejectWithValue(error.response.data)
-        }
-    }
-)
+
 
 const getMovieDetails = createAsyncThunk<IMovieDetails, number | null>(
     'movieSlice/getMovieDetails',
@@ -79,13 +64,6 @@ const movieSlice = createSlice({
     reducers: {},
     extraReducers: builder =>
         builder
-            .addCase(getAllMovieBySearch.fulfilled, (state, action)=>{
-                const {results, page} = action.payload
-                state.resultSearch = results
-                state.page = page
-                state.isFormActive = true
-            })
-
             .addCase(getMovieDetails.fulfilled, (state, action) => {
                 state.movieDetails = action.payload
             })
@@ -105,7 +83,6 @@ const movieActions = {
     getAll,
     getMovieDetails,
     getAllMovieByIDGenres,
-    getAllMovieBySearch
 }
 export {
     movieReducer,
