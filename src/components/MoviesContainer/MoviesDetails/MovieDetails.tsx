@@ -17,7 +17,7 @@ const MovieDetails: FC<IProps> = ({movieDetails}) => {
 
 
     return (
-        <div>
+        <div className={style.mainDiv}>
             <div className={style.movieDetailsContainer}>
                 <div>
                     {poster_path ? (

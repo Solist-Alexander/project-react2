@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d613b5-ffcd-42e8-b488-1503bf30ba54" name="Changes" comment="project" />
+    <list default="true" id="f8d613b5-ffcd-42e8-b488-1503bf30ba54" name="Changes" comment="project">
+      <change afterPath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesDetails/MovieDetails.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesDetails/MovieDetails.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesDetails/MovieDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesDetails/MovieDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesList/MoviesList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesList/MoviesList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesListCard/MoviesListCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesListCard/MoviesListCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesListCard/MoviesListCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesContainer/MoviesListCard/MoviesListCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchContainer/SearchList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchContainer/SearchList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwitchForHeader/SwitchForHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchForHeader/SwitchForHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +72,7 @@
       <workItem from="1711142540693" duration="1029000" />
       <workItem from="1711143761925" duration="264000" />
       <workItem from="1711144227645" duration="2943000" />
+      <workItem from="1711202672293" duration="17815000" />
     </task>
     <task id="LOCAL-00001" summary="project">
       <option name="closed" value="true" />
@@ -91,7 +106,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711200688350</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="project">
+      <option name="closed" value="true" />
+      <created>1711227922765</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711227922766</updated>
+    </task>
+    <task id="LOCAL-00006" summary="project">
+      <option name="closed" value="true" />
+      <created>1711286495992</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711286495992</updated>
+    </task>
+    <task id="LOCAL-00007" summary="project">
+      <option name="closed" value="true" />
+      <created>1711286706341</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711286706341</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

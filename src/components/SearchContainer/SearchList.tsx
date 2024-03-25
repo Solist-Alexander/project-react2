@@ -22,9 +22,6 @@ const SearchList = () => {
     };
 
 
-
-
-
     useEffect(() => {
         dispatch(searchActions.getAllMovieBySearch({query: query.get('query'), page: currentPage}));
     }, [currentPage]);
@@ -37,16 +34,17 @@ const SearchList = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(search)}>
-                <input type="text" placeholder={'Поиск'} name="query" className={style.inputSearch}
-                       onChange={handleInputChange}/>
-            </form>
-
+            <div className={style.formContainer}>
+                <form onSubmit={handleSubmit(search)}>
+                    <input type="text" placeholder={'Поиск'} name="query" className={style.inputSearch}
+                           onChange={handleInputChange}/>
+                </form>
+            </div>
             <div className={style.moviesListCardDiv}>
                 {resultSearch && resultSearch.map(movie => <MoviesListCard key={movie?.id} movie={movie}/>)}
             </div>
             <div className={style.PaginationForMovieDiv}>
-                {resultSearch && resultSearch.length > 0  && <PaginationForSearch/>}
+                {resultSearch && resultSearch.length > 0 && <PaginationForSearch/>}
             </div>
 
         </div>

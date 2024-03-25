@@ -3,6 +3,7 @@ import {FC, PropsWithChildren} from "react";
 import style from './MoviesListCard.module.css'
 import {Rating} from "@mui/material";
 import {useNavigate} from "react-router-dom";
+import {useAppSelector} from "../../../hooks /useAppSelector";
 
 interface IProps extends PropsWithChildren {
     movie: IMovie
@@ -12,8 +13,9 @@ interface IProps extends PropsWithChildren {
 const MoviesListCard: FC<IProps> = ({movie}) => {
     const {id, vote_average, title, poster_path} = movie
     const navigate = useNavigate()
+    const {theme} = useAppSelector(state => state.theme);
     return (
-        <div className={`${style.moviesListCard}`}>
+        <div className={`${style.moviesListCard}  ${theme ? style.moviesListCardDark : style.moviesListCardLight}`}>
             <button onClick={() => navigate(`/movies/${id}`, {state: {movie}})}>
                 {poster_path ? (
                     <img className={style.moviesPosterImg} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={`${title}`}/>

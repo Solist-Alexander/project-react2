@@ -52,3 +52,22 @@
 .headerDark p {
     color: black;
 }
+
+@media screen and (min-width: 1920px) {
+
+    .header div a:first-of-type {
+        margin-left: 290px;
+    }
+    .textTheme {
+        margin-left: 220px;
+    }
+    .textDatabase {
+        color: white;
+        font-size: 30px;
+        margin-left: 80px;
+    }
+    .iconUser {
+        margin-top: 7px;
+    }
+
+}

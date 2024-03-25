@@ -21,7 +21,7 @@ const MoviesList = () => {
 
 
     return (
-        <div>
+        <div >
             <div className={style.mainContainer}>
                 <div className={style.moviesListCardDiv}>
                     {movies && movies.map(movie => <MoviesListCard key={movie?.id} movie={movie}/>)}

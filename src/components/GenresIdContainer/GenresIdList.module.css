@@ -10,3 +10,13 @@
 .PaginationForMovieDiv{
     margin: 20px 0 20px 580px;
 }
+@media screen and (min-width: 1920px) {
+    .moviesListCardDiv {
+        margin-left: 98px;
+    }
+
+    .PaginationForMovieDiv {
+        margin: 20px 0 20px 825px;
+    }
+
+}
