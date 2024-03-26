@@ -1,11 +1,10 @@
 import {Rating} from "@mui/material";
 import {FC, PropsWithChildren} from "react";
-import { IMovieDetails} from "../../../interfaces /movieInterface";
-
-import style from './MovieDetails.module.css'
 import {useNavigate} from "react-router-dom";
 
+import style from './MovieDetails.module.css'
 import {MovieDetailsGenres} from "./MovieDetailsGenres";
+import {IMovieDetails} from "../../../interfaces ";
 
 interface IProps extends PropsWithChildren {
     movieDetails: IMovieDetails

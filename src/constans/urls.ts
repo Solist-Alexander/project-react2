@@ -5,16 +5,16 @@ const genres = '/genre/movie/list'
 const search = '/search/movie'
 
 const urls = {
-    movie:{
+    movie: {
         base: movies,
-        byId:(id:number) => `${movie}/${id}`,
-        genresByID:(id:number) => `${movies}?with_genres=${id}`
+        byId: (id: number) => `${movie}/${id}`,
+        genresByID: (id: number) => `${movies}?with_genres=${id}`
     },
-    genre:{
+    genre: {
         base: genres
     },
-    search:{
-        base:(query:string) => `${search}?query=${query}`
+    search: {
+        base: (query: string) => `${search}?query=${query}`
     }
 }
 export {

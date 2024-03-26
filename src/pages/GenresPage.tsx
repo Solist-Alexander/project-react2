@@ -1,5 +1,6 @@
 import {Outlet} from "react-router-dom";
-import {GenresList} from "../components/GenresContainer/GenresList/GenresList";
+
+import {GenresList} from "../components";
 
 const GenresPage = () => {
     return (

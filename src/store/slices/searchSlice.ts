@@ -1,7 +1,8 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {IMovie, IMovieDetails, IMovieInfo} from "../../interfaces /movieInterface";
-import {searchService} from "../../services/searchService";
 import {AxiosError} from "axios";
+
+import {IMovie, IMovieInfo} from "../../interfaces ";
+import {searchService} from "../../services";
 
 interface IState {
     page: number

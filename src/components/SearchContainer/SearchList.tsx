@@ -1,12 +1,12 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
-import style from '../MoviesContainer/MoviesList/MoviesList.module.css';
-import {MoviesListCard} from '../MoviesContainer/MoviesListCard/MoviesListCard';
-import {PaginationForSearch} from '../../Paginations/PaginationForSearch/PaginationForSearch';
-import {useAppSelector} from "../../hooks /useAppSelector";
 import {useSearchParams} from "react-router-dom";
-import {useAppDispatch} from "../../hooks /useAppDispatch";
-import {searchActions} from "../../store/slices/searchSlice";
+
+import style from '../MoviesContainer/MoviesList/MoviesList.module.css';
+import {useAppDispatch, useAppSelector} from "../../hooks ";
+import {searchActions} from "../../store";
+import {MoviesListCard} from "../MoviesContainer";
+import {PaginationForSearch} from "../Paginations";
 
 const SearchList = () => {
 

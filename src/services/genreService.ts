@@ -1,7 +1,7 @@
-import {IGenres} from "../interfaces /genreInterface";
 import {apiService} from "./apiService";
 import {IRes} from "../types";
 import {urls} from "../constans";
+import {IGenres} from "../interfaces ";
 
 
 const genreService = {

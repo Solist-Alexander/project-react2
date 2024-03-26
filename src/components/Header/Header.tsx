@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-
 import style from './Header.module.css'
 import {NavLink} from "react-router-dom";
+
 import {SwitchForHeader} from "../SwitchForHeader";
-import {useAppDispatch}  from "../../hooks /useAppDispatch";
-import {useAppSelector} from "../../hooks /useAppSelector";
-import {themeActions} from "../../store/slices/themeSlice";
+import {useAppDispatch, useAppSelector} from "../../hooks ";
+import {themeActions} from "../../store";
 
 const Header = () => {
     const dispatch = useAppDispatch();

@@ -1,4 +1,4 @@
-import {SearchList} from "../components/SearchContainer/SearchList";
+import {SearchList} from "../components";
 
 const SearchPage = () => {
     return (

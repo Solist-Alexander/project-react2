@@ -1,7 +1,7 @@
-import {IGenre} from "../../../interfaces /genreInterface";
 import {FC, PropsWithChildren} from "react";
 import {useNavigate} from "react-router-dom";
 import style from './MovieDetails.module.css'
+import {IGenre} from "../../../interfaces ";
 
 interface IProps extends PropsWithChildren {
     genre: IGenre

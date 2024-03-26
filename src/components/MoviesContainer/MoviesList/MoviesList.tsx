@@ -1,11 +1,11 @@
-import {useAppDispatch} from "../../../hooks /useAppDispatch";
-import {useAppSelector} from "../../../hooks /useAppSelector";
 import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
-import {movieActions} from "../../../store/slices/movieSlice";
-import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
+
 import style from './MoviesList.module.css'
-import {PaginationForMovie} from "../../../Paginations/PaginationForMovie/PaginationForMovie";
+import {useAppDispatch, useAppSelector} from "../../../hooks ";
+import {movieActions} from "../../../store";
+import {PaginationForMovie} from "../../Paginations";
+import {MoviesListCard} from "../MoviesListCard";
 
 const MoviesList = () => {
     const {movies} = useAppSelector(state => state.movies)
@@ -21,7 +21,7 @@ const MoviesList = () => {
 
 
     return (
-        <div >
+        <div>
             <div className={style.mainContainer}>
                 <div className={style.moviesListCardDiv}>
                     {movies && movies.map(movie => <MoviesListCard key={movie?.id} movie={movie}/>)}

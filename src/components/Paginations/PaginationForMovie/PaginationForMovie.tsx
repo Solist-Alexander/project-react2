@@ -1,23 +1,21 @@
 import React from 'react';
-
 import {useSearchParams} from "react-router-dom";
-import style from "../Pagination.module.css";
 
-const PaginationForSearch = () => {
-    const [query, setQuery] = useSearchParams({query: '', page: '1'});
-    const currentPage = query.get('page')?query.get('page'):'1'
-    const currentQuery = query.get('query') ? query.get('query') : ''
+import style from '../Pagination.module.css'
 
+const PaginationForMovie = () => {
+    const [query, setQuery] = useSearchParams({page: '1'});
+    const currentPage = query.get('page') ? query.get('page') : '1'
 
     const next = () => {
         const nextPage = +currentPage + 1;
-        setQuery({query: currentQuery, page: nextPage.toString() });
+        setQuery({page: nextPage.toString()});
     }
 
     const prev = () => {
         if (+currentPage > 1) {
             const prevPage = +currentPage - 1;
-            setQuery({query: currentQuery, page: prevPage.toString() });
+            setQuery({page: prevPage.toString()});
         }
     }
     return (
@@ -32,5 +30,6 @@ const PaginationForSearch = () => {
         </div>
     );
 };
-
-export  {PaginationForSearch};
+export {
+    PaginationForMovie
+};

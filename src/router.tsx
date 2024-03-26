@@ -1,12 +1,9 @@
 import React from "react";
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MoviesPage} from "./pages/MoviesPage";
-import {MainLayout} from "./layouts/MainLayout";
-import {MovieInfoPage} from "./pages/MovieInfoPage";
-import {GenresPage} from "./pages/GenresPage";
-import {SearchPage} from "./pages/SearchPage";
-import {GenresIdList} from "./components/GenresIdContainer/GenresIdList";
 
+import {GenresPage, MovieInfoPage, MoviesPage, SearchPage} from "./pages";
+import {GenresIdList} from "./components";
+import {MainLayout} from "./layouts";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +27,6 @@ const router = createBrowserRouter([
             {
                 path: 'search', element: <SearchPage/>
             }
-
         ]
     }
 

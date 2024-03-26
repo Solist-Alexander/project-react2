@@ -1,7 +1,7 @@
 import {apiService} from "./apiService";
-import {IMovie, IMovieDetails, IMovieInfo} from "../interfaces /movieInterface";
 import {urls} from "../constans";
 import {IRes} from "../types";
+import {IMovieDetails, IMovieInfo} from "../interfaces ";
 
 const movieService = {
     getAll: (page:string|null = '1'): IRes<IMovieInfo> => apiService.get(urls.movie.base, {params: {page}}),
